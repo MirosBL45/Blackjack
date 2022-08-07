@@ -148,6 +148,9 @@ function stay() {
 
             dealerSum = reduceAce(dealerSum, dealerAceCount);
 
+            helpAce += dealerAceCount;
+            console.log(`Srednji helpAce: ${helpAce}`);
+
             if (dealerAceCount === 1) {
                 dealerAceCount = 0;
             }
