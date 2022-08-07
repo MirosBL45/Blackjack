@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Black Jack Game, the most popular game in casino">
+    <meta name="keywords" content="HTML, CSS, JavaScript, learning, Black Jack Game">
+    <meta name="author" content="Miroslav Jovic">
+    <meta name="robots" content="index, follow">
+    <title>Blackjack</title>
+    <link rel="shortcut icon" href="img/JMlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Let's play Blackjack!!!</h1>
+
+    <h2>Dealer: <span id="dealer_sum"></span></h2>
+    <div id="dealer_cards">
+        <img id="hidden" src="img/cards/backMJ.jpg" alt="hidden_card">
+        <!-- <img src="img/cards/10-D.png" alt="some_card"> -->
+    </div>
+
+    <h2>You: <span id="your_sum"></span></h2>
+    <div id="your_cards"></div>
+
+    <div class="div_buttons1">
+        <button id="hit">Hit</button>
+        <button id="stay">Stay</button>
+    </div>
+
+    <p id="results"></p>
+
+    <div class="div_buttons2">
+        <button id="reload" onclick="window.location.reload()">Play again!</button>
+        <button id="rules">Display rules</button>
+    </div>
+
+    
+
+    <div class="rules_modal">
+        <button id="closeModal">X</button>        
+            <h3>Rules for the Blackjack</h3>
+            <p>The goal is to have a number greater than the Dealer, and not to exceed 21. If you exceed 21, you automatically lose.</p>
+            <p>The dealer has the right to draw the card last.</p>
+            <p>Good luck!!!</p>            
+    </div>
+
+    <footer>
+        <p class="footer_description">
+            Motivated by <a href="https://www.youtube.com/c/KennyYipCoding/videos" target="_blank">Kenny Yip Coding</a>,
+            Coded by <a href="https://github.com/MirosBL45" target="_blank">Miroslav Jovic</a>            
+        </p>
+    </footer>
+    
+
+    <script src="app/script.js"></script>
+</body>
+</html>

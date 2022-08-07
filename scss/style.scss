@@ -1,0 +1,127 @@
+@import 'media';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    @include odaziv(big-desktop) {
+        font-size: 120%;
+    }
+
+    @include odaziv(velikitelefon) {
+        font-size: 85%;
+    }
+
+    @include odaziv(phone) {
+        font-size: 75%; //9px=1rem; 9/16px=56.25%
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: hsl(116, 100%, 17%) url("../img/BJbckg.png") repeat;
+    text-shadow: 1px 1px 1px #000;
+    font-weight: bold;
+    color: white;
+}
+
+h1,
+h2 {
+    margin: 1rem 0;
+}
+
+img {
+    height: 10.938rem;
+    width: 7.813rem;
+    margin: 1px;
+}
+
+.div_buttons1,
+.div_buttons2 {
+    margin: 1rem 0;
+}
+
+#dealer_cards,
+#your_cards {
+    margin: 0 0.7rem;
+}
+
+#results {
+    border: 5px dotted hsl(240, 70%, 61%);
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    display: none;
+}
+
+.rules_modal {
+    text-shadow: none;
+    display: none;
+    background-color: hsl(0, 0%, 30%);
+    color: hsl(0, 0%, 85%);
+    box-shadow: rgba(255, 255, 255, 0.8) 0 0 1000px 1000px;
+    max-width: 40.62rem;
+    margin: auto;
+    padding: 3.12rem;
+    border-radius: 0.7rem;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    h3 {
+        margin: 3rem 0;
+        font-size: 2.7rem;
+    }
+
+    p {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+
+    #closeModal {
+        height: 1.25rem;
+        width: 1.25rem;
+        color: hsl(0, 0%, 85%);
+        background-color: transparent;
+        border: 0;
+        font-size: 1.56rem;
+        font-weight: bold;
+        position: absolute;
+        right: 1.2rem;
+        top: 1.2rem;
+        cursor: pointer;
+    }
+}
+
+footer {
+    margin-top: auto;
+
+    .footer_description {
+        padding: 1rem 0.5rem;
+        font-weight: bold;
+        text-align: center;
+
+        a {
+            transition: 0.27s;
+            text-decoration: none;
+            color: hsl(195, 53%, 71%);
+        }
+
+        a:hover {
+            color: hsl(289, 72%, 27%)
+        }
+    }
+}
+
+@import 'buttons';
