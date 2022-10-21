@@ -1,5 +1,5 @@
-@mixin odaziv($granica) {
-    @if $granica ==phone {
+@mixin responseMed($limit) {
+    @if $limit ==phone {
         @media only screen and (max-width: 400px) {
             @content
         }
@@ -7,7 +7,7 @@
         ;
     }
 
-    @if $granica ==velikitelefon {
+    @if $limit ==bigPhone {
         @media only screen and (max-width: 539px) {
             @content
         }
@@ -15,7 +15,7 @@
         ;
     }
 
-    @if $granica ==tab-port {
+    @if $limit ==tab-port {
         @media only screen and (max-width: 600px) {
             @content
         }
@@ -23,7 +23,7 @@
         ;
     }
 
-    @if $granica ==tab-land {
+    @if $limit ==tab-land {
         @media only screen and (max-width: 900px) {
             @content
         }
@@ -31,7 +31,7 @@
         ;
     }
 
-    @if $granica ==big-desktop {
+    @if $limit ==big-desktop {
         @media only screen and (min-width: 1200px) {
             @content
         }

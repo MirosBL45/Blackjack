@@ -43,6 +43,10 @@ img {
   margin: 1px;
 }
 
+#hidden {
+  border-radius: 4px;
+}
+
 .div_buttons1,
 .div_buttons2 {
   margin: 1rem 0;

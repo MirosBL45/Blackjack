@@ -7,15 +7,15 @@
 }
 
 html {
-    @include odaziv(big-desktop) {
+    @include responseMed(big-desktop) {
         font-size: 120%;
     }
 
-    @include odaziv(velikitelefon) {
+    @include responseMed(bigPhone) {
         font-size: 85%;
     }
 
-    @include odaziv(phone) {
+    @include responseMed(phone) {
         font-size: 75%; //9px=1rem; 9/16px=56.25%
     }
 }
@@ -41,6 +41,10 @@ img {
     height: 10.938rem;
     width: 7.813rem;
     margin: 1px;
+}
+
+#hidden {
+    border-radius: 4px;
 }
 
 .div_buttons1,

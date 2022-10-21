@@ -105,17 +105,17 @@ function hit() {
 function stay() {
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
-    console.log(`nulti dealer sum je ${dealerSum}`);
+    console.log(`zero dealer sum je ${dealerSum}`);
 
     let helpAce = dealerAceCount;
 
-    console.log(`helpAce je ${helpAce}`);
+    console.log(`helpAce is ${helpAce}`);
 
     if (dealerAceCount === 1) {
         dealerAceCount = 0;
     }
 
-    console.log(`Na pocetku dealer ima ${dealerAceCount} keceva`);
+    console.log(`On start dealer has ${dealerAceCount} Aces`);
 
     canHit = false;
     document.getElementById('hidden').src = `img/cards/${hidden}.png`;
@@ -141,30 +141,30 @@ function stay() {
             cardImgNew.alt = `card: ${cardNew}`;
 
             dealerSum += getValue(cardNew);
-            console.log(`prvi dealer sum je ${dealerSum}`);
+            console.log(`first dealer sum is ${dealerSum}`);
 
             dealerAceCount += checkAce(cardNew);
-            console.log(`dealer ima ${dealerAceCount} keceva`);
+            console.log(`dealer has ${dealerAceCount} Aces`);
 
             dealerSum = reduceAce(dealerSum, dealerAceCount);
 
             helpAce += dealerAceCount;
-            console.log(`Srednji helpAce: ${helpAce}`);
+            console.log(`middle helpAce: ${helpAce}`);
 
             if (dealerAceCount === 1) {
                 dealerAceCount = 0;
             }
 
-            console.log(`dealer posle skidanja ima ${dealerAceCount} keceva`);
-            console.log(`drugi dealer sum je ${dealerSum}`);
+            // console.log(`dealer posle skidanja ima ${dealerAceCount} keceva`);
+            // console.log(`drugi dealer sum je ${dealerSum}`);
 
             if (helpAce > 0) {
                 for (let i = 0; i < helpAce; i++) {
                     dealerSum = reduceAce(dealerSum, helpAce);
                 }
-                console.log(`treci dealer sum je ${dealerSum}`);
+                console.log(`third dealer sum is ${dealerSum}`);
                 helpAce--;
-                console.log(`Na kraju je helpAce: ${helpAce}`);
+                console.log(`At the end helpAce is: ${helpAce}`);
             }
 
             document.getElementById('dealer_cards').append(cardImgNew);
@@ -228,14 +228,14 @@ function reduceAce(playerSum, playerAceCount) {
 
 
 const rulesEl = document.querySelector('.rules_modal');
-const zatvoriEl = document.querySelector('#closeModal');
-const prikaziEl = document.querySelector('#rules');
+const closeEl = document.querySelector('#closeModal');
+const showEl = document.querySelector('#rules');
 
-zatvoriEl.addEventListener('click', () => {
+closeEl.addEventListener('click', () => {
     rulesEl.style.display = 'none'
 })
 
 
-prikaziEl.addEventListener('click', () => {
+showEl.addEventListener('click', () => {
     rulesEl.style.display = 'block'
 })
