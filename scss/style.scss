@@ -108,7 +108,7 @@ img {
         transition: 0.23s;
 
         &:hover {
-            transform: rotate(180deg) translateY(-80%);
+            transform: rotate(180deg) translateY(-80%) scale(1.3);
         }
     }
 }
