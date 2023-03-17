@@ -105,6 +105,11 @@ img {
         right: 1.2rem;
         top: 1.2rem;
         cursor: pointer;
+        transition: 0.23s;
+
+        &:hover {
+            transform: rotate(180deg) translateY(-80%);
+        }
     }
 }
 

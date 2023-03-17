@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background: hsl(116deg, 100%, 17%) url("../img/BJbckg.png") repeat;
+  background: hsl(116, 100%, 17%) url("../img/BJbckg.png") repeat;
   text-shadow: 1px 1px 1px #000;
   font-weight: bold;
   color: white;
@@ -58,7 +58,7 @@ img {
 }
 
 #results {
-  border: 5px dotted hsl(240deg, 70%, 61%);
+  border: 5px dotted hsl(240, 70%, 61%);
   border-radius: 15px;
   margin: 0 auto;
   padding: 1rem 2rem;
@@ -70,8 +70,8 @@ img {
 .rules_modal {
   text-shadow: none;
   display: none;
-  background-color: hsl(0deg, 0%, 30%);
-  color: hsl(0deg, 0%, 85%);
+  background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 85%);
   box-shadow: rgba(255, 255, 255, 0.8) 0 0 1000px 1000px;
   max-width: 40.62rem;
   margin: auto;
@@ -94,7 +94,7 @@ img {
 .rules_modal #closeModal {
   height: 1.25rem;
   width: 1.25rem;
-  color: hsl(0deg, 0%, 85%);
+  color: hsl(0, 0%, 85%);
   background-color: transparent;
   border: 0;
   font-size: 1.56rem;
@@ -103,6 +103,10 @@ img {
   right: 1.2rem;
   top: 1.2rem;
   cursor: pointer;
+  transition: 0.23s;
+}
+.rules_modal #closeModal:hover {
+  transform: rotate(180deg) translateY(-80%);
 }
 
 footer {
@@ -116,10 +120,10 @@ footer .footer_description {
 footer .footer_description a {
   transition: 0.27s;
   text-decoration: none;
-  color: hsl(195deg, 53%, 71%);
+  color: hsl(195, 53%, 71%);
 }
 footer .footer_description a:hover {
-  color: hsl(289deg, 72%, 27%);
+  color: hsl(289, 72%, 27%);
 }
 
 #rules, #reload, #stay, #hit {
@@ -145,21 +149,21 @@ footer .footer_description a:hover {
 }
 
 #hit {
-  background: hsl(112deg, 45%, 47%);
+  background: hsl(112, 45%, 47%);
 }
 
 #stay {
-  background: hsl(0deg, 60%, 40%);
+  background: hsl(0, 60%, 40%);
 }
 
 #reload {
-  background: hsl(240deg, 70%, 61%);
+  background: hsl(240, 70%, 61%);
   font-size: 0.938rem;
   display: none;
 }
 
 #rules {
-  background: hsl(195deg, 53%, 39%);
+  background: hsl(195, 53%, 39%);
   font-size: 0.938rem;
   display: inline-block;
 }
