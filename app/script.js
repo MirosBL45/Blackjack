@@ -125,7 +125,7 @@ function stay() {
         message = 'You Lost!';
     }
     else if (dealerSum > 21) {
-        message = 'You Win!';
+        message = 'You Won!';
     } //both player <=21
     else if (yourSum < dealerSum) {
         message = 'You Lost';
@@ -170,7 +170,7 @@ function stay() {
             document.getElementById('dealer_cards').append(cardImgNew);
         }
         if (dealerSum > 21 || yourSum > dealerSum) {
-            message = 'You Win!';
+            message = 'You Won!';
         } else if (yourSum == dealerSum) {
             message = "It's a Tie!";
         } else {
